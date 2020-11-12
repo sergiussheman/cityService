@@ -13,7 +13,7 @@ With a properly configured instance of PostgreSQL you should be able to start up
 
 By default applications uses 8081 port.
 
-#Test the project
+# Test the project
 For testing purposes you can use provided json configuration for Postman.
 The name of the json configuration is 'cityService.postman.json'.
 
