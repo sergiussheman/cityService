@@ -26,10 +26,8 @@ public class CityController {
     }
 
     @PostMapping("/distance")
-    public String addDistances(@Valid @RequestBody List<DistanceDTO> distances) {
+    public void addDistances(@Valid @RequestBody List<DistanceDTO> distances) {
         cityService.addDistances(distances);
-
-        return "OK";
     }
 
     @GetMapping("/path")

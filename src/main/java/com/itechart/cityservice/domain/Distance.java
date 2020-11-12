@@ -12,11 +12,13 @@ public class Distance {
     @GeneratedValue
     private Long id;
 
-    @Column(name = "first_city")
-    private String firstCity;
+    @ManyToOne
+    @JoinColumn(name = "first_city")
+    private City firstCity;
 
-    @Column(name = "second_city")
-    private String secondCity;
+    @ManyToOne
+    @JoinColumn(name = "second_city")
+    private City secondCity;
 
     private Long distance;
 }

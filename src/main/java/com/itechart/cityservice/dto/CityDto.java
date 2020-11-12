@@ -11,13 +11,13 @@ import java.util.Objects;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class City {
+public class CityDto {
     private String name;
-    private Map<City, Long> adjacentCities = new HashMap<>();
+    private Map<CityDto, Long> adjacentCities = new HashMap<>();
 
     @Override public String toString() {
         StringBuilder adjacentCitiesAsString = new StringBuilder();
-        for (Map.Entry<City, Long> currentAdjacent : adjacentCities.entrySet()) {
+        for (Map.Entry<CityDto, Long> currentAdjacent : adjacentCities.entrySet()) {
             adjacentCitiesAsString.append(currentAdjacent.getKey().getName()).append(":").append(currentAdjacent.getValue());
         }
 
@@ -30,7 +30,7 @@ public class City {
     @Override public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        City city = (City) o;
+        CityDto city = (CityDto) o;
         return name.equals(city.name);
     }
 
