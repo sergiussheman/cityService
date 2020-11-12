@@ -142,7 +142,7 @@ public class CityServiceImpl implements CityService {
                         pathRequest.getStartCity(), pathRequest.getDestinationCity()));
             }
 
-            result.sort((Comparator.comparing(PathResponse::getDistance)));
+            result.sort(Comparator.comparing(PathResponse::getDistance));
             return result;
         } finally {
             readLock.unlock();
